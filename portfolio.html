@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Koong - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Texturina', serif;
+            background-color: #F0FAFF;
+            margin: 0;
+            padding: 0 50px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            background-color: #070B47;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-item {
+            background-color: #070B47;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .main-content {
+            background-color: #070B47;
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            margin: 50px 0;
+            text-align: left;
+        }
+        
+        .main-content h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .main-content p {
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background-color: white;
+            color: #070B47;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo">Alex Koong</a>
+        <div class="nav">
+            <a href="portfolio.html" class="nav-item">Work</a>
+            <a href="resume.pdf" class="nav-item">Resume</a>
+            <a href="about.html" class="nav-item">Fun</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>My Portfolio</h1>
+        <p>Here are some of my recent projects and work.</p>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <h2>Accessible Components</h2>
+                <p>Designing and implementing accessible dropdown menus with a focus on user experience.</p>
+            </div>
+            <div class="project-card">
+                <h2>Vending Machine UX</h2>
+                <p>Analyzing and improving the user experience of vending machine interfaces.</p>
+            </div>
+            <div class="project-card">
+                <h2>Responsive Redesign</h2>
+                <p>Creating responsive web designs that work seamlessly across all devices.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
