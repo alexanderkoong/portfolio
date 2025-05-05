@@ -89,6 +89,7 @@
             padding: 30px;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            text-align: center;
         }
         
         .interest-card:hover {
@@ -103,7 +104,15 @@
         .interest-card p {
             font-size: 16px;
             line-height: 1.5;
-            margin-bottom: 0;
+            margin-bottom: 15px;
+        }
+
+        .interest-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -119,22 +128,23 @@
     
     <div class="main-content">
         <h1>About Me</h1>
-        <p>When I'm not building products, I enjoy exploring new ideas and experiences.</p>
+        <p>When I'm not building, I love playing tennis (and all sports!) and traveling the world.</p>
         
         <div class="interests-grid">
             <div class="interest-card">
-                <h2>Photography</h2>
-                <p>Capturing moments and telling stories through the lens of my camera.</p>
-            </div>
-            <div class="interest-card">
+                <img src="travel2.JPG" alt="Travel" class="interest-image">
                 <h2>Travel</h2>
-                <p>Exploring new cultures and finding inspiration in different places.</p>
+                <p>Exploring new places with friends is one of my favorite ways to make memories. From roaming the castle walls in Dubrovnik to experiencing the unique temples in Angkor Wat, I love immersing myself in new cultures and hearing the stories of others.</p>
             </div>
             <div class="interest-card">
-                <h2>Reading</h2>
-                <p>Diving into books about technology, business, and personal growth.</p>
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <img src="allivy.jpg" alt="Tennis" class="interest-image" style="object-fit: contain; width: 100%;">
+                    <img src="tennispic2.JPEG" alt="Tennis Action" class="interest-image" style="object-fit: contain; width: 100%;">
+                </div>
+                <h2>Tennis</h2>
+                <p> I've been fortunate enough to have had the opportunity to compete at some of the highest levels - from Division 1 College Tennis to the semi-professional circuit, tennis has shaped who I am today. </p>
             </div>
         </div>
     </div>
 </body>
-</html> 
+</html>
