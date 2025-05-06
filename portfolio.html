@@ -77,7 +77,8 @@
         
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
@@ -88,6 +89,11 @@
             padding: 30px;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            cursor: pointer;
+            height: 200px; /* Fixed height for all cards */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Prevents content from overflowing */
         }
         
         .project-card:hover {
@@ -102,6 +108,25 @@
         .project-card p {
             font-size: 16px;
             line-height: 1.5;
+            /* Allow text to grow but not beyond container */
+            flex-grow: 1;
+            overflow: auto;
+        }
+        
+        .project-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+            height: 100%; /* Make link take full height of grid cell */
+        }
+        
+        .project-link:focus {
+            outline: none;
+        }
+        
+        .project-link:hover {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -117,22 +142,34 @@
     
     <div class="main-content">
         <h1>My Portfolio</h1>
-        <p>Here are some of my recent projects and work.</p>
+        <p>Here are some of my recent projects and work. As a product designer focused on accessibility, human interaction, and building communities, these projects reflect my biggest interests.</p>
         
         <div class="project-grid">
-            <div class="project-card">
-                <h2>Accessible Components</h2>
-                <p>Designing and implementing accessible dropdown menus with a focus on user experience.</p>
-            </div>
-            <div class="project-card">
-                <h2>Vending Machine UX</h2>
-                <p>Analyzing and improving the user experience of vending machine interfaces.</p>
-            </div>
-            <div class="project-card">
-                <h2>Responsive Redesign</h2>
-                <p>Creating responsive web designs that work seamlessly across all devices.</p>
-            </div>
+            <a href="https://alexanderkoong.github.io/cs1300hw2/" class="project-link">
+                <div class="project-card">
+                    <h2>Accessibility: Dropdown Menus</h2>
+                    <p>After spending hours researching dropdown menus, I spent time redesigning them to make them more accessible.</p>
+                </div>
+            </a>
+            <a href="https://alexanderkoong.github.io/cs1300hw3/" class="project-link">
+                <div class="project-card">
+                    <h2>Human Interaction: Vending Machines</h2>
+                    <p>I spent hours studying how we interact with vending machines. I hope my research gives an in depth view as to how we interact with the physical world.</p>
+                </div>
+            </a>
+            <a href="https://alexanderkoong.github.io/cs1300hw4/" class="project-link">
+                <div class="project-card">
+                    <h2>Accessibility: Redesigning an Online Menu</h2>
+                    <p>I partnered with Chong Qing House and helpded redesign their online ordering system to make it more accessible.</p>
+                </div>
+            </a>
+            <a href="https://jyang.xyz/iterative-design/" class="project-link">
+                <div class="project-card">
+                    <h2>Community Building: Warp AI</h2>
+                    <p>As part of a design team (Apoorva Talwalkar, Spandan Goel, and Joshua Yang), we partnered with the startup Warp AI to help design a new community building feature in their intelligent terminal.</p>
+                </div>
+            </a>
         </div>
     </div>
 </body>
-</html> 
+</html>
